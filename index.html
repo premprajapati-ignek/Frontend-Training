@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -16,24 +17,24 @@
 |Material+Icons+Sharp
 |Material+Icons+Two+Tone"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="overflow-x-hidden">
     <div class="container-fluid p-0">
       <div class="row g-0 min-vh-100">
-        <div class="col-lg-2 bg-dark text-white d-none" id="sidebar">
+        <div class="col-2 bg-dark text-white d-none" id="sidebar">
           <div class="d-flex flex-column w-100 sticky-top">
             <div
               class="bg-primary text-center fs-5 sticky-top"
               style="padding: 0.85rem"
             >
-              <span class="fw-bold" style="letter-spacing: 1px">Admin</span>LTE
+              <span class="fw-bold">Admin</span>LTE
             </div>
             <div class="my-3 d-flex justify-content-start align-items-center">
               <img
                 src="./assets/members/member5.jpg"
                 alt="member"
-                class="rounded-circle mx-2"
-                style="max-width: 45px"
+                class="rounded-circle mx-2 main-user-img-width"
               />
               <div class="d-flex flex-column">
                 <small class="fw-bolder text-nowrap">Alaxander Pierce</small>
@@ -42,8 +43,7 @@
             </div>
             <div class="container-fluid mb-3">
               <input
-                class="form-control form-control-sm border-0"
-                style="background-color: darkslategray; color: whitesmoke"
+                class="form-control form-control-sm border-0 dark-searchbox"
                 type="text"
                 value="Search..."
                 aria-label=".form-control-sm example"
@@ -51,8 +51,7 @@
             </div>
             <div class="d-flex flex-column">
               <div
-                class="border border-light-subtle border-start-0 border-end-0 border-opacity-50 py-1 mb-2"
-                style="color: darkgray"
+                class="border border-start-0 border-end-0 border-opacity-50 py-1 mb-2 text-white-50"
               >
                 <small class="ms-3">MAIN NAVIGATION</small>
               </div>
@@ -142,15 +141,17 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg">
+        <div class="col-12" id="mainBody">
           <nav class="container-fluid bg-primary py-2 text-white sticky-top">
             <div class="d-flex align-items-center">
-              <button
-                class="btn btn-outline-light d-flex align-items-center"
-                id="toggleSidebar"
-              >
-                <span class="material-icons-outlined"> menu </span>
-              </button>
+              <div class="d-none d-lg-block">
+                <button
+                  class="btn btn-outline-light d-flex align-items-center"
+                  id="toggleSidebar"
+                >
+                  <span class="material-icons-outlined"> menu </span>
+                </button>
+              </div>
               <div class="ms-auto d-flex align-items-center mt-2">
                 <a href="#" class="nav-link me-3 d-none d-sm-block">
                   <span class="material-icons-outlined fs-3"> mail </span>
@@ -186,8 +187,7 @@
                 >
                   <img
                     src="./assets/members/member5.jpg"
-                    class="img-fluid rounded-circle px-2"
-                    style="width: 45px"
+                    class="img-fluid rounded-circle px-2 main-user-img-width"
                   />
                   <span class="me-2 text-nowrap">Alexander Pierce</span>
                 </a>
@@ -212,21 +212,17 @@
             </div>
             <div class="row">
               <div class="col-12 col-sm-6 col-lg-3 mb-2">
-                <div
-                  class="card overflow-hidden mx-auto"
-                  style="max-width: 350px"
-                >
+                <div class="card overflow-hidden mx-auto">
                   <div class="row g-0">
                     <div class="col">
                       <img
                         src="./assets/cards/card1.png"
-                        class="img-fluid rounded-start object-fit-fill"
+                        class="img-fluid rounded-start card-img-height"
                         alt="..."
-                        style="height: 100%"
                       />
                     </div>
                     <div class="col-9">
-                      <div class="card-body" style="padding: 0.5rem">
+                      <div class="card-body card-padding">
                         <h6 class="card-title text-nowrap">CPU TRAFFIC</h6>
                         <p class="card-text">90%</p>
                       </div>
@@ -235,21 +231,17 @@
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-lg-3 mb-2">
-                <div
-                  class="card overflow-hidden card overflow-hidden mx-auto"
-                  style="max-width: 350px"
-                >
+                <div class="card overflow-hidden card overflow-hidden mx-auto">
                   <div class="row g-0">
                     <div class="col">
                       <img
                         src="./assets/cards/card2.png"
-                        class="img-fluid rounded-start object-fit-fill"
+                        class="img-fluid rounded-start card-img-height"
                         alt="..."
-                        style="height: 100%"
                       />
                     </div>
                     <div class="col-9">
-                      <div class="card-body" style="padding: 0.5rem">
+                      <div class="card-body card-padding">
                         <h6 class="card-title text-nowrap">LIKES</h6>
                         <p class="card-text">41,410</p>
                       </div>
@@ -258,21 +250,17 @@
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-lg-3 mb-2">
-                <div
-                  class="card overflow-hidden card overflow-hidden mx-auto"
-                  style="max-width: 350px"
-                >
+                <div class="card overflow-hidden card overflow-hidden mx-auto">
                   <div class="row g-0">
                     <div class="col">
                       <img
                         src="./assets/cards/card3.png"
-                        class="img-fluid rounded-start object-fit-fill"
+                        class="img-fluid rounded-start card-img-height"
                         alt="..."
-                        style="height: 100%"
                       />
                     </div>
                     <div class="col-9">
-                      <div class="card-body" style="padding: 0.5rem">
+                      <div class="card-body card-padding">
                         <h6 class="card-title text-nowrap">SALES</h6>
                         <p class="card-text">760</p>
                       </div>
@@ -281,21 +269,17 @@
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-lg-3 mb-2">
-                <div
-                  class="card overflow-hidden card overflow-hidden mx-auto"
-                  style="max-width: 350px"
-                >
+                <div class="card overflow-hidden card overflow-hidden mx-auto">
                   <div class="row g-0">
                     <div class="col">
                       <img
                         src="./assets/cards/card4.png"
-                        class="img-fluid rounded-start object-fit-fill"
+                        class="img-fluid rounded-start card-img-height"
                         alt="..."
-                        style="height: 100%"
                       />
                     </div>
                     <div class="col-9">
-                      <div class="card-body" style="padding: 0.5rem">
+                      <div class="card-body card-padding">
                         <h6 class="card-title text-nowrap">NEW MEMBERS</h6>
                         <p class="card-text">2,000</p>
                       </div>
@@ -336,8 +320,7 @@
                       <img
                         src="./assets/members/member1.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Alaxander</small>
                       <small class="fw-light">Today</small>
@@ -348,8 +331,7 @@
                       <img
                         src="./assets/members/member2.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Norman</small>
                       <small class="fw-light">Yesterday</small>
@@ -360,8 +342,7 @@
                       <img
                         src="./assets/members/member3.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Jane</small>
                       <small class="fw-light">12 Jan</small>
@@ -372,8 +353,7 @@
                       <img
                         src="./assets/members/member4.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">John</small>
                       <small class="fw-light">12 Jan</small>
@@ -384,8 +364,7 @@
                       <img
                         src="./assets/members/member5.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Alaxander</small>
                       <small class="fw-light">13 Jan</small>
@@ -396,8 +375,7 @@
                       <img
                         src="./assets/members/member6.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Sarah</small>
                       <small class="fw-light">14 Jan</small>
@@ -408,8 +386,7 @@
                       <img
                         src="./assets/members/member7.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Nora</small>
                       <small class="fw-light">15 Jan</small>
@@ -420,8 +397,7 @@
                       <img
                         src="./assets/members/member7.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Nora</small>
                       <small class="fw-light">15 Jan</small>
@@ -432,8 +408,7 @@
                       <img
                         src="./assets/members/member8.jpg"
                         alt="member"
-                        class="rounded-circle"
-                        style="max-width: 75px"
+                        class="rounded-circle member-img-width"
                       />
                       <small class="fw-bold">Nadia</small>
                       <small class="fw-light">15 Jan</small>
@@ -483,14 +458,12 @@
                       >
                         <img
                           src="./assets/members/member5.jpg"
-                          alt=""
-                          class="img-fluid rounded-circle px-2"
-                          style="width: 50px"
+                          alt="..."
+                          class="img-fluid rounded-circle chat-img-width px-2"
                         />
                         <div
-                          class="alert alert-secondary flex-grow-1"
+                          class="alert alert-secondary flex-grow-1 m-0 p-1"
                           role="alert"
-                          style="margin: 0; padding: 0.2rem"
                         >
                           <small
                             >Is this template really for free? That's
@@ -510,17 +483,15 @@
                         class="pb-2 d-flex justify-content-center align-items-center"
                       >
                         <div
-                          class="alert alert-secondary flex-grow-1"
+                          class="alert alert-secondary flex-grow-1 m-0 p-1"
                           role="alert"
-                          style="margin: 0; padding: 0.2rem"
                         >
                           <small>You better believe it!</small>
                         </div>
                         <img
                           src="./assets/members/member8.jpg"
-                          alt=""
-                          class="img-fluid rounded-circle px-2"
-                          style="width: 50px"
+                          alt="..."
+                          class="img-fluid rounded-circle chat-img-width px-2"
                         />
                       </div>
                     </div>
@@ -536,14 +507,12 @@
                       >
                         <img
                           src="./assets/members/member5.jpg"
-                          alt=""
-                          class="img-fluid rounded-circle px-2"
-                          style="width: 50px"
+                          alt="..."
+                          class="img-fluid rounded-circle chat-img-width px-2"
                         />
                         <div
-                          class="alert alert-secondary flex-grow-1"
+                          class="alert alert-secondary flex-grow-1 m-0 p-1"
                           role="alert"
-                          style="margin: 0; padding: 0.2rem"
                         >
                           <small
                             >Working with AdminLTE on a great new app! Wanna
@@ -563,17 +532,15 @@
                         class="pb-2 d-flex justify-content-center align-items-center"
                       >
                         <div
-                          class="alert alert-secondary flex-grow-1"
+                          class="alert alert-secondary flex-grow-1 m-0 p-1"
                           role="alert"
-                          style="margin: 0; padding: 0.2rem"
                         >
                           <small>You better believe it!</small>
                         </div>
                         <img
                           src="./assets/members/member8.jpg"
-                          alt=""
-                          class="img-fluid rounded-circle px-2"
-                          style="width: 50px"
+                          alt="..."
+                          class="img-fluid rounded-circle chat-img-width px-2"
                         />
                       </div>
                     </div>
@@ -613,17 +580,15 @@
                         </div>
                       </div>
                       <div
-                        class="progress"
+                        class="progress set-progressbar-height"
                         role="progressbar"
                         aria-label="Success example"
                         aria-valuenow="25"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="height: 7px"
                       >
                         <div
-                          class="progress-bar bg-primary"
-                          style="width: 75%"
+                          class="progress-bar bg-primary set-progressbar-progress-width"
                         ></div>
                       </div>
                     </div>
@@ -640,17 +605,15 @@
                         </div>
                       </div>
                       <div
-                        class="progress"
+                        class="progress set-progressbar-height"
                         role="progressbar"
                         aria-label="Success example"
                         aria-valuenow="25"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="height: 7px"
                       >
                         <div
-                          class="progress-bar bg-danger"
-                          style="width: 75%"
+                          class="progress-bar bg-danger set-progressbar-progress-width"
                         ></div>
                       </div>
                     </div>
@@ -667,17 +630,15 @@
                         </div>
                       </div>
                       <div
-                        class="progress"
+                        class="progress set-progressbar-height"
                         role="progressbar"
                         aria-label="Success example"
                         aria-valuenow="25"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="height: 7px"
                       >
                         <div
-                          class="progress-bar bg-success"
-                          style="width: 75%"
+                          class="progress-bar bg-success set-progressbar-progress-width"
                         ></div>
                       </div>
                     </div>
@@ -694,17 +655,15 @@
                         </div>
                       </div>
                       <div
-                        class="progress"
+                        class="progress set-progressbar-height"
                         role="progressbar"
                         aria-label="Success example"
                         aria-valuenow="25"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        style="height: 7px"
                       >
                         <div
-                          class="progress-bar bg-warning"
-                          style="width: 75%"
+                          class="progress-bar bg-warning set-progressbar-progress-width"
                         ></div>
                       </div>
                     </div>
@@ -835,33 +794,25 @@
                   <div class="card overflow-hidden text-bg-warning mb-2">
                     <div class="row g-0">
                       <div
-                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center"
-                        style="opacity: 0.7"
+                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center opacity-75"
                       >
                         <img
                           src="./assets/icons/tag.png"
-                          class="img-fluid rounded-start"
+                          class="img-fluid rounded-start colored-card-img-width"
                           alt="..."
-                          style="height: 60%"
                         />
                       </div>
                       <div class="col-9">
-                        <div
-                          class="card-body text-white"
-                          style="padding: 0.5rem"
-                        >
+                        <div class="card-body text-white card-padding">
                           <h6 class="card-title text-nowrap">INVENTORY</h6>
-                          <p class="card-text" style="margin-bottom: 0.3rem">
-                            5,200
-                          </p>
+                          <p class="card-text mb-1">5,200</p>
                           <div
-                            class="progress mb-2"
+                            class="progress mb-2 set-card-progressbar-height"
                             role="progressbar"
                             aria-label="Example 5px high"
                             aria-valuenow="50"
                             aria-valuemin="0"
                             aria-valuemax="100"
-                            style="height: 5px"
                           >
                             <div
                               class="progress-bar text-bg-dark"
@@ -880,30 +831,25 @@
                   <div class="card overflow-hidden text-bg-success mb-2">
                     <div class="row g-0">
                       <div
-                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center"
-                        style="opacity: 0.7"
+                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center opacity-75"
                       >
                         <img
                           src="./assets/icons/heart.png"
-                          class="img-fluid rounded-start"
+                          class="img-fluid rounded-start colored-card-img-width"
                           alt="..."
-                          style="height: 60%"
                         />
                       </div>
                       <div class="col-9">
-                        <div class="card-body" style="padding: 0.5rem">
+                        <div class="card-body card-padding">
                           <h6 class="card-title text-nowrap">MENTIONS</h6>
-                          <p class="card-text" style="margin-bottom: 0.3rem">
-                            92,050
-                          </p>
+                          <p class="card-text mb-1">92,050</p>
                           <div
-                            class="progress mb-2"
+                            class="progress mb-2 set-card-progressbar-height"
                             role="progressbar"
                             aria-label="Example 5px high"
                             aria-valuenow="20"
                             aria-valuemin="0"
                             aria-valuemax="100"
-                            style="height: 5px"
                           >
                             <div
                               class="progress-bar text-bg-dark"
@@ -922,34 +868,28 @@
                   <div class="card overflow-hidden text-bg-danger mb-2">
                     <div class="row g-0">
                       <div
-                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center"
-                        style="opacity: 0.7"
+                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center opacity-75"
                       >
                         <img
                           src="./assets/icons/cloud.png"
-                          class="img-fluid rounded-start"
+                          class="img-fluid rounded-start colored-card-img-width"
                           alt="..."
-                          style="height: 60%"
                         />
                       </div>
                       <div class="col-9">
-                        <div class="card-body" style="padding: 0.5rem">
+                        <div class="card-body card-padding">
                           <h6 class="card-title text-nowrap">DOWNLOADS</h6>
-                          <p class="card-text" style="margin-bottom: 0.3rem">
-                            114,381
-                          </p>
+                          <p class="card-text mb-1">114,381</p>
                           <div
-                            class="progress mb-2"
+                            class="progress mb-2 set-card-progressbar-height"
                             role="progressbar"
                             aria-label="Example 5px high"
                             aria-valuenow="70"
                             aria-valuemin="0"
                             aria-valuemax="100"
-                            style="height: 5px"
                           >
                             <div
-                              class="progress-bar text-bg-dark"
-                              style="width: 70%"
+                              class="progress-bar text-bg-dark set-progressbar-progress-width"
                             ></div>
                           </div>
                           <p class="card-text">
@@ -964,35 +904,27 @@
                   <div class="card overflow-hidden text-bg-info">
                     <div class="row g-0">
                       <div
-                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center"
-                        style="opacity: 0.7"
+                        class="col-3 text-bg-dark d-flex align-items-center justify-content-center opacity-75"
                       >
                         <img
                           src="./assets/icons/message.png"
-                          class="img-fluid rounded-start"
+                          class="img-fluid rounded-start colored-card-img-width"
                           alt="..."
-                          style="height: 60%"
                         />
                       </div>
                       <div class="col-9">
-                        <div
-                          class="card-body text-white"
-                          style="padding: 0.5rem"
-                        >
+                        <div class="card-body text-white card-padding">
                           <h6 class="card-title text-nowrap">
                             DIRECT MESSAGES
                           </h6>
-                          <p class="card-text" style="margin-bottom: 0.3rem">
-                            163,921
-                          </p>
+                          <p class="card-text mb-1">163,921</p>
                           <div
-                            class="progress mb-2"
+                            class="progress mb-2 set-card-progressbar-height"
                             role="progressbar"
                             aria-label="Example 5px high"
                             aria-valuenow="40"
                             aria-valuemin="0"
                             aria-valuemax="100"
-                            style="height: 5px"
                           >
                             <div
                               class="progress-bar text-bg-dark"
@@ -1033,10 +965,9 @@
                     <div class="d-flex align-items-center border-bottom">
                       <div class="py-2">
                         <img
-                          src="./assets/tv.jpg"
-                          alt=""
-                          class="img-fluid"
-                          style="max-width: 60px"
+                          src="./assets/cards/tv.jpg"
+                          alt="..."
+                          class="img-fluid productlist-img-width"
                         />
                       </div>
                       <div class="p-2 w-100">
@@ -1056,10 +987,9 @@
                     <div class="d-flex align-items-center border-bottom">
                       <div class="py-2">
                         <img
-                          src="./assets/tv.jpg"
-                          alt=""
-                          class="img-fluid"
-                          style="max-width: 60px"
+                          src="./assets/cards/tv.jpg"
+                          alt="..."
+                          class="img-fluid productlist-img-width"
                         />
                       </div>
                       <div class="p-2 w-100">
@@ -1080,10 +1010,9 @@
                     <div class="d-flex align-items-center border-bottom">
                       <div class="py-2">
                         <img
-                          src="./assets/tv.jpg"
-                          alt=""
-                          class="img-fluid"
-                          style="max-width: 60px"
+                          src="./assets/cards/tv.jpg"
+                          alt="..."
+                          class="img-fluid productlist-img-width"
                         />
                       </div>
                       <div class="p-2 w-100">
@@ -1104,10 +1033,9 @@
                     <div class="d-flex align-items-center border-bottom">
                       <div class="py-2">
                         <img
-                          src="./assets/tv.jpg"
-                          alt=""
-                          class="img-fluid"
-                          style="max-width: 60px"
+                          src="./assets/cards/tv.jpg"
+                          alt="..."
+                          class="img-fluid productlist-img-width"
                         />
                       </div>
                       <div class="p-2 w-100">
@@ -1140,10 +1068,13 @@
   </body>
   <script>
     const sidebar = document.getElementById("sidebar");
+    const mainBody = document.getElementById("mainBody");
     const toggleBtn = document.getElementById("toggleSidebar");
 
     toggleBtn.addEventListener("click", () => {
       sidebar.classList.toggle("d-none");
+      mainBody.classList.toggle("col-12");
+      mainBody.classList.toggle("col-10");
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
